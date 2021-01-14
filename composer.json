@@ -1,12 +1,15 @@
 {
     "name": "hexlet/code",
-    "type": "project",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "mxmilyasov",
+            "name": "Max Ilyasov",
             "email": "mxmilyasov@gmail.com"
         }
     ],
-    "require": {}
+    "description": "The first project of the Hexlet course: Brain games",
+    "bin": [
+        "bin/brain-games"
+    ]
 }
