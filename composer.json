@@ -1,7 +1,9 @@
 {
     "name": "hexlet/code",
+    "bin": [
+        "bin/brain-games"
+    ],
     "type": "library",
-    "license": "MIT",
     "authors": [
         {
             "name": "Max Ilyasov",
@@ -9,7 +11,11 @@
         }
     ],
     "description": "The first project of the Hexlet course: Brain games",
-    "bin": [
-        "bin/brain-games"
-    ]
+    "license": "MIT",
+    "autoload": {
+        "files": ["src/Cli.php"]
+    },
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.11"
+    }
 }
