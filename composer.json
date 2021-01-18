@@ -4,7 +4,7 @@
         "bin/brain-games",
         "bin/brain-even"
     ],
-    "type": "library",
+    "type": "project",
     "authors": [
         {
             "name": "Max Ilyasov",
@@ -18,12 +18,12 @@
     },
     "autoload": {
         "files": [
-            "src/Cli.php",
-            "src/Even.php"
+            "src/cli.php",
+            "src/engine.php",
+            "src/games/even.php"
         ]
     },
     "require": {
-        "php": ">=7.4",
         "wp-cli/php-cli-tools": "^0.11.11"
     },
     "require-dev": {

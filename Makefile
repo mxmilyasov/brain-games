@@ -4,6 +4,9 @@ install:
 update:
 	composer update
 
+autoload:
+	composer dumpautoload
+
 brain-games:
 	./bin/brain-games
 
