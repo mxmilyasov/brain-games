@@ -1,6 +1,9 @@
 install:
 	composer install
 
+update:
+	composer update
+
 brain-games:
 	./bin/brain-games
 
