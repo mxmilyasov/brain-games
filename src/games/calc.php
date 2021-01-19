@@ -31,11 +31,13 @@ function calculateExpression(string $operator, int $leftOperand, int $rightOpera
     if ($operator === '*') {
         return ($leftOperand * $rightOperand);
     }
+
+    return 0;
 }
 
 function startCalcGame(): void
 {
-    $gameData = function () {
+    $gameData = function (): array {
         $leftOperand = rand(0, 10);
         $rightOperand = rand(0, 10);
         $operator = getOperator();

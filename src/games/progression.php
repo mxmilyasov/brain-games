@@ -27,7 +27,7 @@ function getProgression(int $num, int $diff): array
 
 function startProgressionGame(): void
 {
-    $gameData = function () {
+    $gameData = function (): array {
         $progressionStartNum = rand(1, 100);
         $progressionDifference = rand(1, 10);
 

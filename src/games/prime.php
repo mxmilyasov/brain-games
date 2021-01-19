@@ -23,7 +23,7 @@ function isPrime(int $num): bool
 
 function startPrimeGame(): void
 {
-    $gameData = function () {
+    $gameData = function (): array {
         $question = rand(0, 20);
         $rightAnswer = isPrime($question) ? 'yes' : 'no';
         return [

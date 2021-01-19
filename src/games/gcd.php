@@ -22,7 +22,7 @@ function getGcd(int $a, int $b): int
 
 function startGcdGame(): void
 {
-    $gameData = function () {
+    $gameData = function (): array {
         $a = rand(0, 100);
         $b = rand(0, 100);
 

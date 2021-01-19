@@ -14,7 +14,7 @@ function isEven(int $number): bool
 
 function startEvenGame(): void
 {
-    $gameData = function () {
+    $gameData = function (): array {
         $question = rand(0, 99);
         $rightAnswer = isEven($question) ? 'yes' : 'no';
         return [
