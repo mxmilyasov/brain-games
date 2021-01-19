@@ -20,18 +20,17 @@ function getOperator(): string
 
 function calculateExpression(string $operator, int $leftOperand, int $rightOperand): int
 {
-    switch ((string)$operator) {
-        case $operator === '+':
-            return ($leftOperand + $rightOperand);
-
-        case $operator === '-':
-            return ($leftOperand - $rightOperand);
-
-        case $operator === '*':
-            return ($leftOperand * $rightOperand);
+    if ($operator === '+') {
+        return ($leftOperand + $rightOperand);
     }
 
-    return 0;
+    if ($operator === '-') {
+        return ($leftOperand - $rightOperand);
+    }
+
+    if ($operator === '*') {
+        return ($leftOperand * $rightOperand);
+    }
 }
 
 function startCalcGame(): void
