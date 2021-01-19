@@ -8,15 +8,19 @@ const EVEN_GAME_LINE = 'Answer "yes" if the number is even, otherwise answer "no
 
 function isEven(int $number): bool
 {
-    return $number % 2 === 0;
+    return ($number % 2) === 0;
 }
 
-function startEvenGame()
+
+function startEvenGame(): void
 {
     $gameData = function () {
         $question = rand(0, 99);
         $rightAnswer = isEven($question) ? 'yes' : 'no';
-        return [$question, $rightAnswer];
+        return [
+            $question,
+            $rightAnswer,
+        ];
     };
-    startGame($gameData, EVEN_GAME_LINE);
+    startGame((array)$gameData, EVEN_GAME_LINE);
 }

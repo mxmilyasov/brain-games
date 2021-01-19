@@ -6,20 +6,21 @@ use function Brain\Games\startGame;
 
 const GCD_GAME_LINE = 'Find the greatest common divisor of given numbers.';
 
-function getGcd($a, $b): int
+function getGcd(int $a, int $b): int
 {
     $res = 0;
     $biggest = $a > $b ? $a : $b;
 
     for ($i = 1; $i < $biggest; $i++) {
-        if ($a % $i === 0 && $b % $i === 0) {
+        if (($a % $i) === 0 && ($b % $i) === 0) {
             $res = $i;
         }
     }
+
     return $res;
 }
 
-function startGcdGame()
+function startGcdGame(): void
 {
     $gameData = function () {
         $a = rand(0, 100);
@@ -28,7 +29,10 @@ function startGcdGame()
         $question = "$a $b";
         $rightAnswer = getGcd($a, $b);
 
-        return [$question, $rightAnswer];
+        return [
+            $question,
+            $rightAnswer,
+        ];
     };
-    startGame($gameData, GCD_GAME_LINE);
+    startGame((array)$gameData, GCD_GAME_LINE);
 }

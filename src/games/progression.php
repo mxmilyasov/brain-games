@@ -7,10 +7,10 @@ use function Brain\Games\startGame;
 const PROGRESSION_GAME_LINE = 'What number is missing in the progression?';
 const PROGRESSION_LENGTH = 10;
 
-function getProgression($num, $diff, $length): array
+function getProgression(int $num, int $diff): array
 {
     $res = [];
-    for ($i = 0; $i < $length; $i++) {
+    for ($i = 0; $i < PROGRESSION_LENGTH; $i++) {
         $res[] = $num;
         $num += $diff;
     }
@@ -25,17 +25,17 @@ function getProgression($num, $diff, $length): array
     ];
 }
 
-function startProgressionGame()
+function startProgressionGame(): void
 {
     $gameData = function () {
         $progressionStartNum = rand(1, 100);
         $progressionDifference = rand(1, 10);
 
-        $progression = getProgression($progressionStartNum, $progressionDifference, PROGRESSION_LENGTH);
+        $progression = getProgression($progressionStartNum, $progressionDifference);
         $question = $progression['progression'];
         $rightAnswer = $progression['missing'];
 
         return [$question, $rightAnswer];
     };
-    startGame($gameData, PROGRESSION_GAME_LINE);
+    startGame((array)$gameData, PROGRESSION_GAME_LINE);
 }

@@ -6,26 +6,31 @@ use function Brain\Games\startGame;
 
 const PRIME_GAME_LINE = "Answer 'yes' if given number is prime. Otherwise answer 'no'";
 
-function isPrime($num): bool
+function isPrime(int $num): bool
 {
     if ($num < 2) {
         return false;
     }
 
     for ($i = 2, $sqrt = sqrt($num); $i <= $sqrt; $i++) {
-        if ($num % $i == 0) {
+        if (($num % $i) == 0) {
             return false;
         }
     }
+
     return true;
 }
 
-function startPrimeGame()
+function startPrimeGame(): void
 {
     $gameData = function () {
         $question = rand(0, 20);
         $rightAnswer = isPrime($question) ? 'yes' : 'no';
-        return [$question, $rightAnswer];
+        return [
+            $question,
+            $rightAnswer,
+        ];
     };
-    startGame($gameData, PRIME_GAME_LINE);
+
+    startGame((array)$gameData, PRIME_GAME_LINE);
 }

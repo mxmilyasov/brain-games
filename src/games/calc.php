@@ -8,25 +8,32 @@ const CALC_GAME_LINE = 'What is the result of the expression?';
 
 function getOperator(): string
 {
-    $operators = ['-', '+', '*'];
+    $operators = [
+        '-',
+        '+',
+        '*',
+    ];
+
     shuffle($operators);
     return $operators[0];
 }
 
-function calculateExpression($operator, $leftOperand, $rightOperand): int
+function calculateExpression(string $operator, int $leftOperand, int $rightOperand): int
 {
     switch ($operator) {
         case $operator === '+':
-            return $leftOperand + $rightOperand;
+            return ($leftOperand + $rightOperand);
+
         case $operator === '-':
-            return $leftOperand - $rightOperand;
+            return ($leftOperand - $rightOperand);
+
         case $operator === '*':
-            return $leftOperand * $rightOperand;
+            return ($leftOperand * $rightOperand);
     }
     return 0;
 }
 
-function startCalcGame()
+function startCalcGame(): void
 {
     $gameData = function () {
         $leftOperand = rand(0, 10);
@@ -35,7 +42,11 @@ function startCalcGame()
 
         $question = "{$leftOperand} {$operator} {$rightOperand}";
         $rightAnswer = calculateExpression($operator, $leftOperand, $rightOperand);
-        return [$question, $rightAnswer];
+        return [
+            $question,
+            $rightAnswer,
+        ];
     };
-    startGame($gameData, CALC_GAME_LINE);
+
+    startGame((array)$gameData, CALC_GAME_LINE);
 }
