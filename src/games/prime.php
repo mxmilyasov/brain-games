@@ -32,5 +32,5 @@ function startPrimeGame(): void
         ];
     };
 
-    startGame((array)$gameData, PRIME_GAME_LINE);
+    startGame($gameData, PRIME_GAME_LINE);
 }

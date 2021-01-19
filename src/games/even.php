@@ -22,5 +22,6 @@ function startEvenGame(): void
             $rightAnswer,
         ];
     };
-    startGame((array)$gameData, EVEN_GAME_LINE);
+
+    startGame($gameData, EVEN_GAME_LINE);
 }

@@ -34,5 +34,6 @@ function startGcdGame(): void
             $rightAnswer,
         ];
     };
-    startGame((array)$gameData, GCD_GAME_LINE);
+
+    startGame($gameData, GCD_GAME_LINE);
 }

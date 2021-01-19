@@ -37,5 +37,6 @@ function startProgressionGame(): void
 
         return [$question, $rightAnswer];
     };
-    startGame((array)$gameData, PROGRESSION_GAME_LINE);
+
+    startGame($gameData, PROGRESSION_GAME_LINE);
 }

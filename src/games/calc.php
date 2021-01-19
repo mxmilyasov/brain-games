@@ -30,6 +30,7 @@ function calculateExpression(string $operator, int $leftOperand, int $rightOpera
         case $operator === '*':
             return ($leftOperand * $rightOperand);
     }
+
     return 0;
 }
 
@@ -48,5 +49,5 @@ function startCalcGame(): void
         ];
     };
 
-    startGame((array)$gameData, CALC_GAME_LINE);
+    startGame($gameData, CALC_GAME_LINE);
 }
