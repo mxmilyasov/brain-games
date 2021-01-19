@@ -22,7 +22,7 @@ function startGame($gameData, $gameLine)
         $answer = prompt('Your answer');
 
         if ($answer != $rightAnswer) {
-            err("$answer is wrong answer ;(. Correct answer was $rightAnswer");
+            err("'$answer' is wrong answer ;(. Correct answer was '$rightAnswer'.");
             line("Let's try again, $name!");
             $rightAnswerCounter = 0;
         } else {
