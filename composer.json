@@ -2,7 +2,8 @@
     "name": "mxmilyasov/php-project-lvl1",
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "type": "project",
     "authors": [
@@ -20,7 +21,8 @@
         "files": [
             "src/cli.php",
             "src/engine.php",
-            "src/games/even.php"
+            "src/games/even.php",
+            "src/games/calc.php"
         ]
     },
     "require": {

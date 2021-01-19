@@ -12,18 +12,18 @@ function startGame($gameData, $gameLine)
 {
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
-    line('Hello, %s!', $name);
+    line("Hello, $name!");
     line($gameLine);
 
     $rightAnswerCounter = 0;
     while ($rightAnswerCounter < GAME_ROUND) {
         [$question, $rightAnswer] = $gameData();
-        line('Question: %s', $question);
+        line("Question: $question");
         $answer = prompt('Your answer');
 
-        if ($answer !== $rightAnswer) {
-            err('\'%s\' is wrong answer ;(. Correct answer was \'yes\'', $rightAnswer);
-            line("Let's try again, %s!", $name);
+        if ($answer != $rightAnswer) {
+            err("$answer is wrong answer ;(. Correct answer was $rightAnswer");
+            line("Let's try again, $name!");
             $rightAnswerCounter = 0;
         } else {
             line('Correct!');
