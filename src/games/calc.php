@@ -20,7 +20,7 @@ function getOperator(): string
 
 function calculateExpression(string $operator, int $leftOperand, int $rightOperand): int
 {
-    switch ($operator) {
+    switch ((string)$operator) {
         case $operator === '+':
             return ($leftOperand + $rightOperand);
 
