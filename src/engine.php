@@ -15,8 +15,7 @@ function startGame($gameData, $gameLine)
     line("Hello, $name!");
     line($gameLine);
 
-    $rightAnswerCounter = 0;
-    while ($rightAnswerCounter < GAME_ROUND) {
+    for ($i = 0; $i < GAME_ROUND; $i++) {
         [$question, $rightAnswer] = $gameData();
         line("Question: $question");
         $answer = prompt('Your answer');
@@ -24,10 +23,9 @@ function startGame($gameData, $gameLine)
         if ($answer != $rightAnswer) {
             err("'$answer' is wrong answer ;(. Correct answer was '$rightAnswer'.");
             line("Let's try again, $name!");
-            $rightAnswerCounter = 0;
+            return;
         } else {
             line('Correct!');
-            $rightAnswerCounter++;
         }
     }
 

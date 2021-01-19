@@ -8,6 +8,10 @@ const PRIME_GAME_LINE = "Answer 'yes' if given number is prime. Otherwise answer
 
 function isPrime($num): bool
 {
+    if ($num < 2) {
+        return false;
+    }
+
     for ($i = 2, $sqrt = sqrt($num); $i <= $sqrt; $i++) {
         if ($num % $i == 0) {
             return false;
