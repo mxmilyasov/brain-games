@@ -4,12 +4,12 @@
 # BrainGames
 Brain Games — учебный проект в рамках курса PHP-программист на [Hexlet](https://ru.hexlet.io/professions/php/projects/45).
 ### Even game
-[![asciicast](https://asciinema.org/a/0YNfEYWHXQHOmcCrVltqp5xKW.svg)](https://asciinema.org/a/0YNfEYWHXQHOmcCrVltqp5xKW)
+Проверка на четность. В игре необходимо ответить является число четным или же нет.
 ### Calculator game
-[![asciicast](https://asciinema.org/a/uztoWoebVEyJmvIA6VRWtQDKM.svg)](https://asciinema.org/a/uztoWoebVEyJmvIA6VRWtQDKM)
+Калькулятор. В игре необходимо сложить, вычесть или же умножить два числа и дать верный ответ.
 ### GCD game
-[![asciicast](https://asciinema.org/a/MtCDQQfIlSiyCzGE3J7CxQTmq.svg)](https://asciinema.org/a/MtCDQQfIlSiyCzGE3J7CxQTmq)
+Наибольший общий делитель. В игре необходимо найти наибольший общий делитель двух чисел и дать верный ответ.
 ### Progression game
-[![asciicast](https://asciinema.org/a/LkyEheQasI1SPCqsoaPGyXVnC.svg)](https://asciinema.org/a/LkyEheQasI1SPCqsoaPGyXVnC)
+Арифметическая прогрессия. В игре необходимо найти пропущенный элемент арифметической прогрессии.
 ### Prime game
-[![asciicast](https://asciinema.org/a/NGs2CSlGXiuBGwrx5kLfOEU8c.svg)](https://asciinema.org/a/NGs2CSlGXiuBGwrx5kLfOEU8c)
+Проверка на простоту. В игре необходимо ответить простое ли представленное число или нет.
